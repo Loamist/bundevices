@@ -111,11 +111,9 @@ API runs on `http://localhost:3000`. Web runs on `http://localhost:3001`.
 
 ## Implementation notes and hints
 
-- Use Drizzle to define the `updates` table with a foreign key to `devices` and timestamps.
+- Use Drizzle to define the `device_updates` table.
 - Use TypeBox for request validation in Fastify route schemas.
-- Consider an index on `(device_id, created_at)` to compute online status efficiently.
-- Realtime can be implemented using Server‑Sent Events (SSE) or WebSockets. Keep it simple.
-- The frontend currently formats dates with `toLocaleDateString()`. For the nice‑to‑have, display `yyyy-MM-dd HH:mm:ss`.
+- Realtime can be implemented using Server‑Sent Events (SSE), polling or WebSockets. Keep it simple.
 
 ## Environment variables
 
