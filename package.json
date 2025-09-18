@@ -1,10 +1,10 @@
 {
-  "name": "@workspace/backend",
+  "name": "bundevices",
   "version": "1.0.0",
-  "description": "Bun backend with Fastify and Drizzle",
+  "description": "bundevices",
   "type": "module",
   "scripts": {
-    "start": "DEV_MODE=1 concurrently 'bun start:api' 'bun start:web'",
+    "start": "concurrently 'bun start:api' 'bun start:web'",
     "start:api": "bun --watch api/serve.ts",
     "start:web": "BUN_PORT=3001 bun web/index.html",
     "test": "bun test",

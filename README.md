@@ -1,4 +1,4 @@
-# IoT Monitoring Hub — Candidate Exercise
+# bundevices: IoT Monitoring Hub
 
 This project is a small full‑stack app built with Bun, Fastify, React, and Drizzle. It simulates an IoT monitoring hub that manages a set of devices running 24/7 and sending periodic status updates.
 
