@@ -1,0 +1,101 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "root": "./"
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!migrations"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noConsole": "info"
+      },
+      "performance": {
+        "noDynamicNamespaceImportAccess": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "off",
+        "noUnusedFunctionParameters": "off"
+      },
+      "nursery": {
+        "noFloatingPromises": "on"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "lineWidth": 120,
+      "indentStyle": "space",
+      "semicolons": "always",
+      "jsxQuoteStyle": "double",
+      "trailingCommas": "all"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":BUN:",
+              ":NODE:",
+              ":BLANK_LINE:",
+              ":URL:",
+              ":BLANK_LINE:",
+              "react",
+              ":PACKAGE:",
+              ":PACKAGE_WITH_PROTOCOL:",
+              ":BLANK_LINE:",
+              ":ALIAS:",
+              ":PATH:"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.ts", "**/*.tsx"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          },
+          "suspicious": {
+            "noExplicitAny": "off",
+            "noArrayIndexKey": "off"
+          },
+          "style": {
+            "noNonNullAssertion": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useHookAtTopLevel": "off"
+          }
+        }
+      }
+    }
+  ]
+}

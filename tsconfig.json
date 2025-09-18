@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext", "DOM"],
+    "types": ["bun-types"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/api/*": ["api/*"],
+      "@/web/*": ["web/*"]
+    },
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Some stricter flags
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": [
+    "api/**/*.ts",
+    "api/**/*.json",
+    "web/**/*.tsx",
+    "web/**/*.ts",
+    "web/**/*.json",
+    "test/**/*.ts",
+    "scripts/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

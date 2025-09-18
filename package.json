@@ -1,0 +1,49 @@
+{
+  "name": "@workspace/backend",
+  "version": "1.0.0",
+  "description": "Bun backend with Fastify and Drizzle",
+  "type": "module",
+  "scripts": {
+    "start": "DEV_MODE=1 concurrently 'bun start:api' 'bun start:web'",
+    "start:api": "bun --watch api/serve.ts",
+    "start:web": "BUN_PORT=3001 bun web/index.html",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "lint": "bun run --bun biome check",
+    "lint:fix": "bun run --bun biome check --write",
+    "db:generate": "bun run --bun drizzle-kit generate",
+    "typecheck": "bun run --bun tsc --noEmit"
+  },
+  "engines": {
+    "bun": ">=1.2.19"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.8",
+    "@fastify/autoload": "^6.3.1",
+    "@fastify/cors": "^11.1.0",
+    "@fastify/one-line-logger": "^2.0.2",
+    "@fastify/swagger": "^9.5.1",
+    "@fastify/type-provider-typebox": "^5.2.0",
+    "@scalar/fastify-api-reference": "^1.35.6",
+    "@sinclair/typebox": "^0.34.41",
+    "@tanstack/react-query": "^5.89.0",
+    "bun-plugin-tailwind": "^0.0.15",
+    "concurrently": "^9.2.1",
+    "drizzle-orm": "^0.44.5",
+    "fastify": "5.4.0",
+    "fastify-plugin": "^5.0.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^24.5.1",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "bun-types": "^1.2.22",
+    "drizzle-kit": "^0.31.4"
+  }
+}
