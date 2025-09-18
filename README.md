@@ -108,6 +108,7 @@ API runs on `http://localhost:3000`. Web runs on `http://localhost:3001`.
 
 - `GET /api/health` — server health status
 - `GET /api/devices` — list devices
+- `GET /documentation` — API documentation, you can use it to test the API.
 
 ## Implementation notes and hints
 
