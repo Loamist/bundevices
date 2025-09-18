@@ -26,7 +26,7 @@ Example payload:
 
 - A device is considered online if it reported at least once in the last minute.
 
-> IMPORTANT: The is a simulation that sends updates to the API every 1 to 5 seconds. This simulation is running automatically when the API starts.
+> IMPORTANT: There is a simulation that sends updates to the API every 1 to 5 seconds. This simulation is running automatically when the API starts.
 
 ## What you need to build
 
